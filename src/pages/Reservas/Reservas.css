@@ -1,0 +1,43 @@
+.reservation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(207, 159, 0);
+  padding: 20px;
+  margin: 10px;
+  font-size: 14px;
+  color: #505050;
+  width: 22%; /* Tamaño para que quepan 4 por fila */
+  box-sizing: border-box; /* Incluye el padding dentro del ancho */
+}
+
+.reservation-list {
+  margin-top: 3vw;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+  justify-content: space-between; /* Espaciado uniforme entre los rectángulos */
+  gap: 20px; /* Espaciado entre rectángulos */
+}
+
+.reservation-item-icon {
+  width: 50px; /* Tamaño reducido de la imagen */
+  height: auto; /* Mantiene proporciones */
+}
+
+.reservation-item-name {
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+@media (max-width: 1000px) {
+  .reservation-item {
+    width: 45%; /* Dos por fila en pantallas más pequeñas */
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reservation-item {
+    width: 100%; /* Una por fila en pantallas pequeñas */
+  }
+}

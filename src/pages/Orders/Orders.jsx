@@ -9,7 +9,9 @@ const Order = () => {
   const [orders, setOrders] = useState([]);
 
   const fetchAllOrders = async () => {
-    const response = await axios.get(`http://localhost:3000/api/order/list`);
+    const response = await axios.get(
+      `https://backend-central-production-f267.up.railway.app/api/order/list`
+    );
     if (response.data.success) {
       setOrders(response.data.data.reverse());
     } else {
@@ -20,7 +22,7 @@ const Order = () => {
   const statusHandler = async (event, orderId) => {
     console.log(event, orderId);
     const response = await axios.post(
-      `http://localhost:3000/api/order/status`,
+      `https://backend-central-production-f267.up.railway.app/api/order/status`,
       {
         orderId,
         status: event.target.value,
